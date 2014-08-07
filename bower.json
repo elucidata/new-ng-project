@@ -1,0 +1,24 @@
+{
+  "name": "My.Project",
+  "private": "true",
+  "version": "1.0.0",
+  "dependencies": {
+    "moment": "~2.7.0",
+    "ng-prettyjson": "~0.1.1",
+    "angular": "~1.2.21",
+    "angular-ui-router": "~0.2.10",
+    "angular-animate": "~1.2.21",
+    "angular-ui-bootstrap-bower": "~0.11.0",
+    "angular-sanitize": "~1.2.21"
+  },
+  "overrides": {
+    "bootstrap": {
+      "main": [
+        "./dist/css/bootstrap.css"
+      ]
+    }
+  },
+  "devDependencies": {
+    "bootstrap": "3.1.1"
+  }
+}

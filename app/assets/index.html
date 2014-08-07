@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html ng-app="app" ng-controller="MainController as main">
+<!--
+  My.Project Application
+  version: {!version!}
+  mode: {!mode!}
+  baseurl: {!baseurl!}
+-->
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="cache-control" content="max-age=0" />
+    <meta http-equiv="cache-control" content="no-cache" />
+    <meta http-equiv="expires" content="0" />
+    <meta http-equiv="expires" content="Tue, 01 Jan 1980 1:00:00 GMT" />
+    <meta http-equiv="pragma" content="no-cache" />
+
+    <meta name="viewport" content="initial-scale=1, maximum-scale=1, user-scalable=no, width=device-width">
+
+    <!-- iOS -->
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <!-- <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+    <link rel="apple-touch-icon" href="media/icons/app-196-{!mode!}.png?v={!version!}" type="image/png">
+    <meta name="apple-mobile-web-app-title" content="My.Project">-->
+
+    <!-- Chrome -->
+    <meta name="mobile-web-app-capable" content="yes">
+    <!-- <link rel="icon" sizes="196x196" href="media/icons/app-196-{!mode!}.png?v={!version!}" type="image/png">
+    <link rel="shortcut icon" sizes="196x196" href="media/icons/app-196-{!mode!}.png?v={!version!}" type="image/png">
+    <link rel="icon" sizes="128x128" href="media/icons/app-128-{!mode!}.png?v={!version!}" type="image/png">
+    <link rel="shortcut icon" sizes="128x128" href="media/icons/app-128-{!mode!}.png?v={!version!}" type="image/png"> -->
+
+    <title>My.Project v{!version!} ({!mode!})</title>
+
+    <link href="styles/app.css?v={!version!}" rel="stylesheet">
+
+    <script>
+      var BASE_URL= "";
+      if(location.hostname == 'localhost') { BASE_URL= "{!baseurl!}"; }
+    </script>
+
+    <script src="scripts/vendor.js?v={!version!}"></script>
+    <script src="scripts/app.js?v={!version!}"></script>
+    <script src="scripts/templates.js?v={!version!}"></script>
+
+  </head>
+  <body>
+    <div ng-include="'core/templates/navigation.html'"></div>
+
+    <div class="container main-container">
+
+         <!-- <datepicker ng-model="dt" min-date="minDate" show-weeks="true" class="well well-sm"></datepicker> -->
+
+         <button class="btn btn-primary" ng-click="main.addAlert()">Add Message</button>
+
+    </div>
+
+    <footer class="footer">
+      <div class="container">
+        v{!version!} ({!mode!})
+      </div>
+    </footer>
+
+
+  </body>
+</html>

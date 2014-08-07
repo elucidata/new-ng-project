@@ -1,0 +1,55 @@
+<nav class="navbar navbar-inverse navbar-fixed-top" role="navigation" ng-controller="NavController as nav">
+
+  <div class="container X-fluid" >
+
+    <div class="navbar-header">
+      <a class="navbar-brand" tooltip="v{!version!} ({!mode!})" tooltip-placement="bottom" hrefX="#">
+        <i class="fa fa-star"></i>
+        Freedom<span>Park</span>
+      </a>
+    </div>
+
+    <ul class="nav navbar-nav navigation-items" ng-if="nav.showNav">
+      <li class="active"><a href="#">Link</a></li>
+      <li><a href="#">Link</a></li>
+      <li class="dropdown">
+        <a href="#" class="dropdown-toggle" data-toggle="dropdown">Dropdown <span class="caret"></span></a>
+        <ul class="dropdown-menu" role="menu">
+          <li><a href="#">Action</a></li>
+          <li><a href="#">Another action</a></li>
+          <li><a href="#">Something else here</a></li>
+          <li class="divider"></li>
+          <li tooltip="You really wanna see what this is about..." tooltip-placement="right" tooltip-append-to-body="true"><a href="#">Separated link</a></li>
+          <li class="divider"></li>
+          <li><a href="#">One more separated link</a></li>
+        </ul>
+      </li>
+    </ul>
+
+    <ul class="nav navbar-nav navbar-right navigation-items" ng-if="nav.showNav">
+      <li><a href="#">Link</a></li>
+      <li class="dropdown">
+        <a href="#" class="dropdown-toggle" data-toggle="dropdown">Dropdown <span class="caret"></span></a>
+        <ul class="dropdown-menu" role="menu">
+          <li><a href="#">Action</a></li>
+          <li><a href="#">Another action</a></li>
+          <li tooltip="Goood stuff here." tooltip-placement="left"><a href="#">Something else here</a></li>
+          <li class="divider"></li>
+          <li><a href="#">Separated link</a></li>
+        </ul>
+      </li>
+    </ul>
+
+  </div>
+
+</nav>
+
+
+<div class="alerts-container">
+   <alert ng-repeat="alert in alerts" class="alert-item" type="{{alert.type}}" close="main.closeAlert($index)" ng-clickX="main.closeAlert($index)">
+     <i class="fa fa-exclamation-circle " ng-if="alert.type=='danger'"></i>
+     <i class="fa fa-flag " ng-if="alert.type=='warning'"></i>
+     <i class="fa fa-info-circle " ng-if="alert.type=='info'"></i>
+     <span ng-bind-html="alert.msg"></span>
+    </alert>
+</div>

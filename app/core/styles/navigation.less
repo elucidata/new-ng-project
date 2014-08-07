@@ -1,0 +1,43 @@
+.navbar-inverse {
+  /* background-color: #062041 !important; */
+  background: linear-gradient( top, #111, #333);
+}
+.navbar-brand {
+  color: #EEE !important;
+  cursor: default;
+
+  span {
+    /* color: #f72400; */
+    font-weight: 300;
+  }
+
+  i.fa {
+    margin-left: -20px;
+    color: gray;
+  }
+}
+
+.alert-item {
+  i.fa {
+    opacity: 0.5;
+  }
+  &.ng-enter {
+    animation: fadeInDown 300ms;
+  }
+  &.ng-leave {
+    animation: fadeOutUp 300ms;
+  }
+}
+
+
+.navigation-items {
+  .active * {
+    cursor: default;
+  }
+  &.ng-enter {
+    animation: fadeInDown 300ms;
+  }
+  &.ng-leave {
+    animation: fadeOutUp 300ms;
+  }
+}
