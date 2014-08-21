@@ -33,6 +33,12 @@ exports.config =
       options:
         cascade: false
 
+    uglify:
+      mangle: false
+      compress:
+        global_defs:
+          DEBUG: false
+
   paths:
     public: 'www'
 
@@ -49,11 +55,11 @@ exports.config =
     map:
       mode: 'dev'
       built: -> (new Date).toISOString()
-      baseurl: 'https://www.freedomparktest.com'
+      baseurl: 'http://www.myurl.com'
 
   overrides:
     production:
       keyword:
         map:
           mode: 'production'
-          baseurl: 'https://www.freedomparkdfw.com'
+          baseurl: 'http://www.myurl.com'

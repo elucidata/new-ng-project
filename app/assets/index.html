@@ -51,9 +51,10 @@
 
          <!-- <datepicker ng-model="dt" min-date="minDate" show-weeks="true" class="well well-sm"></datepicker> -->
 
-         <button class="btn btn-primary" ng-click="main.addAlert()">Add Message</button>
+         <ui-view></ui-view>
 
     </div>
+
 
     <footer class="footer">
       <div class="container">
@@ -61,6 +62,9 @@
       </div>
     </footer>
 
+    <div ng-if="AILoading" class="app-spinner">
+      <div class="spinner"><div class="ai-circled ai-indicator ai-grey-spin"></div></div>
+    </div>
 
   </body>
 </html>
